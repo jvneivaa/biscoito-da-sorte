@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hide {
+    display: none;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body, button {
+    font-family: 'DM sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+	animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+main {
+    background-color: #FFF;
+    width: min(42.8rem, 90%);
+    margin-top: 6rem;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 0 2rem 1rem 1rem rgba(0, 0, 0, 0.2), 0 1rem 2rem 2rem rgba(0, 0, 0, 0.19);
+    padding: 4.8rem 6.4rem 6.4rem;
+}
+
+h1 {
+    color: #34355B;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2.4rem;
+    margin-bottom: 1.4rem;
+}
+
+/* SCREEN 1 */ 
+
+.screen1 p {
+    color: #34355B;
+    font-weight: normal;
+    font-size: 1.4rem;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.screen1 button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* SCREEN 2 */
+
+.random-phrase {
+    margin-bottom: 1.6rem;
+    background-color: #E4EDF1;
+    box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .6rem 2rem 0 rgba(0, 0, 0, 0.19);
+}
+
+.screen2 p {
+    font-family: 'Dancing script', sans-serif;
+    font-size: 2.4rem;
+}
+
+.screen2 img {
+    margin-bottom: 1.6rem;
+}
+
+.screen2 button {
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: #FF9500;
+    padding: 1.6rem;
+    border: none;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.screen2 button:hover {
+    background-color: #fd9e19;
+    scale: 1.05;
+}
+
+/* ANIMATION */
+
+.random-phrase {
+    --startY: 30rem;
+    animation: appear 2s forwards;
+    animation-timing-function: ease;
+}
+
+.screen1 button:hover {
+    animation: shake .1s infinite;
+}
+
+@keyframes appear {
+    0% {
+        transform: translateY(var(--startY));
+        scale: 0.4;
+    }    
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(5deg);
+    }
+}
